@@ -4,6 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      padding-left: 200px; /* يترك مساحة للـ sidebar */
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: 100vh;
+      background-color:  ;
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sidebar img {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      width: 100%;
+      text-align: center;
+      display: block;
+      font-weight: 500;
+    }
+
+    .sidebar a:hover {
+      background-color: #495057;
+      color: #ffc107;
+    }
+
+    .content {
+      padding: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <img src="images/logo_no_bg.png" alt="Logo" />
+    <a href="#">Home</a>
+    <a href="#">Sign Up</a>
+    <a href="#">Contact Us</a>
+    
+  </div>
     <style>
         
         *{
@@ -44,7 +100,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <img src="images/logo_no_bg.png" alt="Logo" class="logo">
+    
     <div class="banner">
         <div class="slider" style="--quantity: 10">
             <div class="item" style="--position: 1"><a href=""><img src="images/Flag_of_Greece.gif" alt=""></a></div>
