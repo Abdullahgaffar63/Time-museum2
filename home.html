@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #D2D2D2;
+            background-image:
+                repeating-linear-gradient(to right, transparent 0 100px,
+                    #25283b22 100px 101px),
+                repeating-linear-gradient(to bottom, transparent 0 100px,
+                    #25283b22 100px 101px);
+        }
+
+        body::before {
+            position: absolute;
+            width: min(1400px, 90vw);
+            top: 10%;
+            left: 50%;
+            height: 90%;
+            transform: translateX(-50%);
+            content: '';
+            background-image: url(images/bg.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: top center;
+            pointer-events: none;
+        }
+    </style>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+    <div class="banner">
+        <div class="slider" style="--quantity: 10">
+            <div class="item" style="--position: 1">
+                <a href="country/china.html" target="_blank"><img src="chinaFlag.gif" alt="China"></a>
+            </div>
+            <div class="item" style="--position: 2">
+                <a href="country/japan.html" target="_blank"><img src="jplan.gif" alt="japan"></a>
+            </div>
+            <div class="item" style="--position: 3">
+                <a href="country/korea.html" target="_blank"><img src="Ksflag.gif" alt="korea_south"></a>
+            </div>
+            <div class="item" style="--position: 4">
+                <a href="country/palsetine.html"><img src="PalestineFlag.gif" alt="Palestine"></a>
+            </div>
+            <div class="item" style="--position: 5">
+              <a href="pakistan.html" target="_blank"> <img src="pakistan-flag.gif" alt="Pakistan"></a>
+            </div>
+            <div class="item" style="--position: 6">
+                <a href="Greek.html" target="_blank"><img src="greFlag.gif" alt="Greek"></a>
+            </div>
+            <div class="item" style="--position: 7">
+                <a href="egypt.html" target="_blank"><img src="egypt-flag-16.gif" alt="Egypt"></a>
+            </div>
+            <div class="item" style="--position: 8">
+                <a href="roma.html" target="_blank"><img src="Rflag.gif" alt="Roma_italy"></a>
+            </div>
+            <div class="item" style="--position: 9">
+                <a href="Gallery_Library/library.html" target="_blank"><img src="giphy.gif" alt="library"></a>
+            </div>
+            <div class="item" style="--position: 10">
+                <a href="Gallery_Library/gallery.html" target="_blank"><img src="large-earth-flyover-animated-gif-2.gif" alt="gallery"></a>
+                </div>
+        </div>
+        <div class="content">
+            <h1 data-content="country">
+            SELECT   TO DISCOVER 
+            </h1>
+            <div class="author">
+                <h2>Museum of time</h2>
+                <p><b>2025</b></p>
+                <p>
+                   
+                </p>
+            </div>
+            <div class="model"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

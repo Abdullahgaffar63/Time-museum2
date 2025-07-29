@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    background: url('bg.gif') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Georgia', serif;
+}
+
+.book {
+        width: 400px;
+        max-width: 90vw;
+        aspect-ratio: 3/4;
+        perspective: 1500px;
+        position: relative;
+     }
+
+input[type="checkbox"] {
+    display: none;
+}
+
+
+.cover-front {
+    width: 100%;
+    height: 100%;
+    background-image: url('data for project/PAGE 1.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    border: 6px double #8b5e3c;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 1s ease;
+    transform-origin: left;
+    position: absolute;
+    z-index: 2;
+}
+
+#openCover:checked+.cover-front {
+    transform: rotateY(-180deg);
+}
+
+
+.first-page {
+    width: 100%;
+    height: 100%;
+    background: #fffdf3;
+    border: 4px solid #c7a77a;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 30px;
+    box-sizing: border-box;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+#openCover:checked~.first-page {
+    opacity: 1;
+}
+
+
+.slogan {
+    font-size: 20px;
+    color: #7b5b39;
+    margin-bottom: 40px;
+    animation: floatText 6s ease-in-out infinite;
+}
+
+@keyframes floatText {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-10px);
+        opacity: 0.6;
+    }
+}
+
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 24px;
+    background-color: #a6754d;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #7e5635;
+}
