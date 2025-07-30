@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+body {
+  background: #f9f5f0;
+  font-family: 'Tajawal', sans-serif;
+  color: #333;
+}
+
+.library-title {
+  font-size: 2.5rem;
+  color: #3a2e39;
+  margin: 2rem 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeInDown 1.2s ease-out;
+  text-align: center;
+}
+
+@keyframes fadeInDown {
+  0% {opacity:0; transform: translateY(-30px);}
+  100% {opacity:1; transform: translateY(0);}
+}
+
+@keyframes fadeSlide {
+  0% {opacity: 0; transform: translateY(20px);}
+  100% {opacity:1; transform: translateY(0);}
+}
+
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  opacity: 0;
+  animation: fadeSlide 0.8s ease forwards;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  color: #3a2e39;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.btn-outline-dark {
+  margin-top: auto;
+  border-radius: 50px;
+}
+
+.section-title {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: #3a2e39;
+  border-bottom: 2px solid #d4af37;
+  padding-bottom: 0.5rem;
+}
+
+.section-title i {
+  margin-left: 0.5rem;
+  color: #d4af37;
+}
+
+.sidebar {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  background: #3a3226;
+  padding-top: 2rem;
+}
+
+.sidebar label {
+  color: #e8e0d5;
+  padding: 0.75rem 1rem;
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 0.25rem 0;
+  font-weight: 500;
+}
+
+.sidebar label:hover {
+  background: #504738;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + label {
+  background: #d4af37;
+  color: #3a3226;
+}
+
+.section-container {
+  display: none;
+}
+
+#r‑china:checked ~ main #china,
+#r‑japan:checked ~ main #japan,
+#r‑korea:checked ~ main #korea,
+#r‑egypt:checked ~ main #egypt,
+#r‑greece:checked ~ main #greece,
+#r‑pakistan:checked ~ main #pakistan,
+#r‑palestine:checked ~ main #palestine,
+#r‑italy:checked ~ main #italy {
+  display: block;
+}
+
+.book-info-text {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #555;
+}
