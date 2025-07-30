@@ -1,0 +1,189 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('bgc.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Parallax Sections */
+.parallax {
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 60vh;
+    /* Parallax animated scaling */
+    animation: zoom 5s alternate infinite;
+}
+
+/* Individual backgrounds for sections */
+.section1 {
+    background-image: url('Greeceph/01-the-parthenon-1521138731.gif');
+}
+
+.section2 {
+    background-image: url('Greeceph/100-1024.jpg');
+}
+
+.section3 {
+    background-image: url('Greeceph/181-1024.jpg');
+}
+
+/* Fade-in keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Parallax scale animation */
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+/* Text Section styles and animation */
+.text-section {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px 20px;
+    color: #333;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInUp 2s forwards;
+    animation-delay: 0.5s;
+}
+
+.text-section h1,
+.text-section h2 {
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.7s;
+}
+
+.text-section p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+/* ----------- IMAGE SLIDER ----------- */
+.slider {
+    position: relative;
+    width: 350px;
+    height: 220px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    z-index: 5;
+}
+
+.slides {
+    display: flex;
+    width: 500%;
+    transition: transform 0.7s cubic-bezier(.86, 0, .07, 1);
+}
+
+.slide {
+    width: 350px;
+    height: 220px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide img {
+    width: 95%;
+    height: 95%;
+    object-fit: contain;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.slider input[type=radio] {
+    display: none;
+}
+
+#slide1:checked~.slides {
+    transform: translateX(0);
+}
+
+#slide2:checked~.slides {
+    transform: translateX(-350px);
+}
+
+#slide3:checked~.slides {
+    transform: translateX(-700px);
+}
+
+#slide4:checked~.slides {
+    transform: translateX(-1050px);
+}
+
+#slide5:checked~.slides {
+    transform: translateX(-1400px);
+}
+
+/* Navigation dots */
+.slider-nav {
+    text-align: center;
+    margin-top: 7px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+}
+
+.slider-nav label {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: #bbb;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#slide1:checked~.slides {
+    transform: translateX(0);
+}
+
+#slide2:checked~.slides {
+    transform: translateX(-350px);
+}
+
+#slide3:checked~.slides {
+    transform: translateX(-700px);
+}
+
+#slide4:checked~.slides {
+    transform: translateX(-1050px);
+}
+
+#slide5:checked~.slides {
+    transform: translateX(-1400px);
+}
+
